@@ -26,7 +26,7 @@ function geocoder_mapzen($address, $options = array()) {
   $api_url = "https://search.mapzen.com/v1/search";
 
   if (!empty($geocoder_settings['geocoder_apikey_mapzen'])) {
-    $consumer_key = $geocoder_settings['geocoder_apikey_mapzen'];
+    $api_key = $geocoder_settings['geocoder_apikey_mapzen'];
   }
   else {
     throw new Exception('You must specify an API key for Mapzen.');
