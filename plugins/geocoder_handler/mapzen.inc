@@ -24,6 +24,7 @@ $plugin = array(
 function geocoder_mapzen($address, $options = array()) {
   geophp_load();
   $api_url = "https://search.mapzen.com/v1/search";
+  $geocoder_settings = variable_get('geocoder_settings', array());
 
   if (!empty($geocoder_settings['geocoder_apikey_mapzen'])) {
     $api_key = $geocoder_settings['geocoder_apikey_mapzen'];
